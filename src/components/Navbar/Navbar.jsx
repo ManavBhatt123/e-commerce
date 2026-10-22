@@ -2,6 +2,7 @@ import Logo from "../../assets/logo.png";
 import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
+import PropTypes from "prop-types";
 import DarkMode from "./DarkMode";
 
 const Menu = [
@@ -21,12 +22,12 @@ const Menu = [
     link: "/#",
   },
   {
-    id: 3,
+    id: 4,
     name: "Mens Wear",
     link: "/#",
   },
   {
-    id: 3,
+    id: 5,
     name: "Electronics",
     link: "/#",
   },
@@ -132,6 +133,10 @@ const Navbar = ({ handleOrderPopup }) => {
       </div>
     </div>
   );
+};
+
+Navbar.propTypes = {
+  handleOrderPopup: PropTypes.func.isRequired,
 };
 
 export default Navbar;

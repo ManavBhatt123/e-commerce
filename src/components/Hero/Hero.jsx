@@ -1,6 +1,7 @@
 import Image1 from "../../assets/hero/women.png";
 import Image2 from "../../assets/hero/shopping.png";
 import Image3 from "../../assets/hero/sale.png";
+import PropTypes from "prop-types";
 import Slider from "react-slick";
 
 const ImageList = [
@@ -70,7 +71,7 @@ const Hero = ({ handleOrderPopup }) => {
                     {data.description}
                   </p>
                   <div
-                      <div key={data.id}>
+                    data-aos="fade-up"
                     data-aos-duration="500"
                     data-aos-delay="300"
                   >
@@ -103,6 +104,10 @@ const Hero = ({ handleOrderPopup }) => {
       </div>
     </div>
   );
+};
+
+Hero.propTypes = {
+  handleOrderPopup: PropTypes.func.isRequired,
 };
 
 export default Hero;
